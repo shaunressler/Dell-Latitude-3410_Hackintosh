@@ -1,7 +1,7 @@
 # Dell-Latitude-3410_Hackintosh
 OpenCore EFI for Dell Latitude 3410 with 10th generation Intel processor  
   
-**Resigned from last company & returned device, won't update this repository anymore**
+**This is a fork of WHCMrShi's original work, updated for Sequoia**
 
 
 ## Hardware Info
@@ -17,8 +17,8 @@ OpenCore EFI for Dell Latitude 3410 with 10th generation Intel processor
 
 ## macOS version
 
-Build for macOS Sonoma 14.0, should also work for other lower versions of macOS  
-If you need to use it for other versions of macOS besides Sonoma, please change `AirportItlwm.kext` in `EFI/OC/Kexts` to the corresponding version  
+Build for macOS Sonoma 15.0, should also work for other lower versions of macOS  
+If you need to use it for other versions of macOS besides Sequoia, please change `AirportItlwm.kext` in `EFI/OC/Kexts` to the corresponding version  
 e.g. Download and use `AirportItlwm_v2.2.0_stable_BigSur.kext.zip` from [this link](https://github.com/OpenIntelWireless/itlwm/releases) for macOS 11
 
 
@@ -29,5 +29,6 @@ Sleep (AOAC, Not stable enough to enable)
 Display Port via Type-C not tested yet  
 
 ## Remark
-Modify SMBIOS info in `EFI/OC/config.plist/Root/PlatformInfo/Generic` before boot  
+Modify SMBIOS info in `EFI/OC/config.plist/Root/PlatformInfo/Generic` before boot
+You can also modify the values in `SMBIOS.config` by replacing the INSERT_VALUES_HERE tags and use the script `UpdateSMBIOS.ps1` to automatically patch your config values
 Check [here](https://dortania.github.io/OpenCore-Install-Guide/config-laptop.plist/coffee-lake-plus.html#platforminfo) for more help
